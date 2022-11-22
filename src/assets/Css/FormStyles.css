@@ -3,20 +3,24 @@
     --light-green: #c1d62e;
     --red: #dd2e22;
     --light-grey:#bbbbbb;
+    --grey:#191919;
+    --dark-grey:#000000;
     --very-light-grey:#efefef;
-    --dark-grey:rgb(65, 65, 65);
+    /* --dark-grey:rgb(65, 65, 65); */
     --bg-color: rgb(255, 255, 255);
 }
 body {
     background-color: var(--blue);
 }
+
+
 /* ============Form Start ============== */
 form {
     border: 1px solid var(--blue);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    /* border-radius: 10px; */
     position: relative;
-    max-width: 450px;
+    max-width: 576px;
     background-color: var(--bg-color);
 }
 
@@ -26,6 +30,8 @@ form {
 
 form img.logo {
     display: block;
+    max-width: 200px;
+    width: 100%;
 }
 
 form button.submit-btn {
@@ -43,4 +49,22 @@ form button.submit-btn:hover{
     border-radius: 5px;
 }
 
+form p {
+    color: var(--dark-grey);
+}
+
+form p.short-msg {
+    margin-top: -15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.gray {
+    color: var(--grey);
+}
 /* ============Form End ============== */
+
+@media screen and (min-width: 576px) {
+    form {
+        border-radius: 10px;
+    }
+}

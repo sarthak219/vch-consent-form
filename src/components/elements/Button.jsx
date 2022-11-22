@@ -6,6 +6,7 @@ function Button({id, text, name, className, onClick,...props}) {
         id={id??""} 
         className={className ? className : "btn btn-primary"} 
         onClick={(e)=>{onClick(e)}}
+        type={props.type ?? "submit"}
         >
         {text ?? ""}
     </button>

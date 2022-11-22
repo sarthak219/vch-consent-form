@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:3000/? -->
+<html lang="en" nighteye="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!-- bootstrap CSS -->
+    <link href="./Consent Form_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Consent Form</title>
+  <script defer="" src="./Consent Form_files/bundle.js"></script><style>body{
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    animation: 1s fade-in-up forwards;
+}
+
+@keyframes fade-in-up {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hc3NldHMvQ3NzL0FwcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYixZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGlDQUFpQztBQUNyQzs7QUFFQTtJQUNJO1FBQ0ksVUFBVTtJQUNkO0lBQ0E7UUFDSSxVQUFVO1FBQ1YsNEJBQTRCO0lBQ2hDO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5e1xuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICAgIG1pbi13aWR0aDogMTAwdnc7XG4gICAgaGVpZ2h0OiAxMDB2aDtcbiAgICB3aWR0aDogMTAwdnc7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBwbGFjZS1pdGVtczogY2VudGVyO1xufVxuXG4uZm9ybS1jb250YWluZXIge1xuICAgIGFuaW1hdGlvbjogMXMgZmFkZS1pbi11cCBmb3J3YXJkcztcbn1cblxuQGtleWZyYW1lcyBmYWRlLWluLXVwIHtcbiAgICAwJXtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICB9XG4gICAgMTAwJSB7XG4gICAgICAgIG9wYWNpdHk6IDE7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMjBweCk7XG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>
+:root {
+    --blue: #0078ac;
+    --light-green: #c1d62e;
+    --red: #dd2e22;
+    --light-grey:#bbbbbb;
+    --very-light-grey:#efefef;
+    --dark-grey:rgb(65, 65, 65);
+    --bg-color: rgb(247, 247, 247);
+}
+
+@supports (color: rgb(0 0 0 / 0)) {
+:root {
+    --bg-color: rgb(246, 246, 246);
+}
+}
+
+/* ============Text input Start ============== */
+
+.input-field {
+    position: relative;
+    line-height: 32px;
+    width: 100%;
+}
+
+input[type=text], input[type=email], input[type=password]{
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: relative;
+    transition: 0.1s;
+    color: var(--dark-grey);
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+input[type=text]+label, input[type=password]+label, input[type=email]+label {
+    position: absolute;
+    font-size: 1rem;
+    width: 100%;
+    top: 5px;
+    left: 20px;
+    color: var(--light-grey);
+    transition: 0.1s;
+    display: inline-block;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus , 
+input[type=text]:invalid, input[type=password]:invalid, input[type=email]:invalid  {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--blue);
+}
+
+input[type=text]:-webkit-autofill +label, 
+input[type=email]:-webkit-autofill +label, 
+input[type=password]:-webkit-autofill +label,
+label.input-lbl-focussed {
+    font-size: 12px !important;
+    top: -16px !important;
+    left: 0%;
+    color: var(--blue) !important;
+    background-color: var(--bg-color)!important;
+    width: auto !important;
+    height: 25px !important;
+    padding: 0 2px !important;
+    border-radius: 7px 7px 0 0;
+    display: block;
+}
+
+input[type=text]:-webkit-autofill ~label, 
+input[type=email]:-webkit-autofill ~label, 
+input[type=password]:-webkit-autofill ~label {
+    left: 20px;
+}
+
+/* ============Text input End ============== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hc3NldHMvQ3NzL2VsZW1lbnRTdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLGVBQWU7SUFDZixzQkFBc0I7SUFDdEIsY0FBYztJQUNkLG9CQUFvQjtJQUNwQix5QkFBeUI7SUFDekIsMkJBQTJCO0lBQzNCLDhCQUE4QjtBQUVsQzs7QUFUQTtBQUFBO0lBUUksOEJBQThCO0FBQ2xDO0FBQUE7O0FBRUEsZ0RBQWdEOztBQUVoRDtJQUNJLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsV0FBVztBQUNmOztBQUVBO0lBQ0ksb0NBQW9DO0lBQ3BDLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQix1QkFBdUI7SUFDdkIsV0FBVztJQUNYLGlDQUFpQztBQUNyQzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsV0FBVztJQUNYLFFBQVE7SUFDUixVQUFVO0lBQ1Ysd0JBQXdCO0lBQ3hCLGdCQUFnQjtJQUNoQixxQkFBcUI7QUFDekI7O0FBRUE7O0lBRUksYUFBYTtJQUNiLGdCQUFnQjtJQUNoQiw2QkFBNkI7QUFDakM7O0FBRUE7Ozs7SUFJSSwwQkFBMEI7SUFDMUIscUJBQXFCO0lBQ3JCLFFBQVE7SUFDUiw2QkFBNkI7SUFDN0IsMkNBQTJDO0lBQzNDLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIseUJBQXlCO0lBQ3pCLDBCQUEwQjtJQUMxQixjQUFjO0FBQ2xCOztBQUVBOzs7SUFHSSxVQUFVO0FBQ2Q7O0FBRUEsOENBQThDIiwic291cmNlc0NvbnRlbnQiOlsiXG46cm9vdCB7XG4gICAgLS1ibHVlOiAjMDA3OGFjO1xuICAgIC0tbGlnaHQtZ3JlZW46ICNjMWQ2MmU7XG4gICAgLS1yZWQ6ICNkZDJlMjI7XG4gICAgLS1saWdodC1ncmV5OiNiYmJiYmI7XG4gICAgLS12ZXJ5LWxpZ2h0LWdyZXk6I2VmZWZlZjtcbiAgICAtLWRhcmstZ3JleTpyZ2IoNjUsIDY1LCA2NSk7XG4gICAgLS1iZy1jb2xvcjogcmdiKDI0NywgMjQ3LCAyNDcpO1xuICAgIC0tYmctY29sb3I6IHJnYigyNDYsIDI0NiwgMjQ2KTtcbn1cblxuLyogPT09PT09PT09PT09VGV4dCBpbnB1dCBTdGFydCA9PT09PT09PT09PT09PSAqL1xuXG4uaW5wdXQtZmllbGQge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBsaW5lLWhlaWdodDogMzJweDtcbiAgICB3aWR0aDogMTAwJTtcbn1cblxuaW5wdXRbdHlwZT10ZXh0XSwgaW5wdXRbdHlwZT1lbWFpbF0sIGlucHV0W3R5cGU9cGFzc3dvcmRde1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHJnYigxODcsIDE4NywgMTg3KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcGFkZGluZzogNXB4IDEwcHg7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHRyYW5zaXRpb246IDAuMXM7XG4gICAgY29sb3I6IHZhcigtLWRhcmstZ3JleSk7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmctY29sb3IpO1xufVxuXG5pbnB1dFt0eXBlPXRleHRdK2xhYmVsLCBpbnB1dFt0eXBlPXBhc3N3b3JkXStsYWJlbCwgaW5wdXRbdHlwZT1lbWFpbF0rbGFiZWwge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgdG9wOiA1cHg7XG4gICAgbGVmdDogMjBweDtcbiAgICBjb2xvcjogdmFyKC0tbGlnaHQtZ3JleSk7XG4gICAgdHJhbnNpdGlvbjogMC4xcztcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbmlucHV0W3R5cGU9dGV4dF06Zm9jdXMsIGlucHV0W3R5cGU9cGFzc3dvcmRdOmZvY3VzLCBpbnB1dFt0eXBlPWVtYWlsXTpmb2N1cyAsIFxuaW5wdXRbdHlwZT10ZXh0XTppbnZhbGlkLCBpbnB1dFt0eXBlPXBhc3N3b3JkXTppbnZhbGlkLCBpbnB1dFt0eXBlPWVtYWlsXTppbnZhbGlkICB7XG4gICAgb3V0bGluZTogbm9uZTtcbiAgICBib3gtc2hhZG93OiBub25lO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWJsdWUpO1xufVxuXG5pbnB1dFt0eXBlPXRleHRdOi13ZWJraXQtYXV0b2ZpbGwgK2xhYmVsLCBcbmlucHV0W3R5cGU9ZW1haWxdOi13ZWJraXQtYXV0b2ZpbGwgK2xhYmVsLCBcbmlucHV0W3R5cGU9cGFzc3dvcmRdOi13ZWJraXQtYXV0b2ZpbGwgK2xhYmVsLFxubGFiZWwuaW5wdXQtbGJsLWZvY3Vzc2VkIHtcbiAgICBmb250LXNpemU6IDEycHggIWltcG9ydGFudDtcbiAgICB0b3A6IC0xNnB4ICFpbXBvcnRhbnQ7XG4gICAgbGVmdDogMCU7XG4gICAgY29sb3I6IHZhcigtLWJsdWUpICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmctY29sb3IpIWltcG9ydGFudDtcbiAgICB3aWR0aDogYXV0byAhaW1wb3J0YW50O1xuICAgIGhlaWdodDogMjVweCAhaW1wb3J0YW50O1xuICAgIHBhZGRpbmc6IDAgMnB4ICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyLXJhZGl1czogN3B4IDdweCAwIDA7XG4gICAgZGlzcGxheTogYmxvY2s7XG59XG5cbmlucHV0W3R5cGU9dGV4dF06LXdlYmtpdC1hdXRvZmlsbCB+bGFiZWwsIFxuaW5wdXRbdHlwZT1lbWFpbF06LXdlYmtpdC1hdXRvZmlsbCB+bGFiZWwsIFxuaW5wdXRbdHlwZT1wYXNzd29yZF06LXdlYmtpdC1hdXRvZmlsbCB+bGFiZWwge1xuICAgIGxlZnQ6IDIwcHg7XG59XG5cbi8qID09PT09PT09PT09PVRleHQgaW5wdXQgRW5kID09PT09PT09PT09PT09ICovIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>:root {
+    --blue: #0078ac;
+    --light-green: #c1d62e;
+    --red: #dd2e22;
+    --light-grey:#bbbbbb;
+    --grey:#000000;
+    --dark-grey:#000000;
+    --very-light-grey:#efefef;
+    --bg-color: rgb(255, 255, 255);
+}
+
+@supports (color: rgb(0 0 0 / 0)) {
+:root {
+    --dark-grey:rgb(65, 65, 65);
+}
+}
+body {
+    background-color: var(--blue);
+}
+
+
+/* ============Form Start ============== */
+form {
+    border: 1px solid var(--blue);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 450px;
+    background-color: var(--bg-color);
+}
+
+.form-check {
+    transition: 0.2s cubic-bezier(0.82, 0.25, 0.38, 1.1);
+}
+
+form img.logo {
+    display: block;
+}
+
+form button.submit-btn {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+form button.submit-btn:hover{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border-radius: 5px;
+}
+
+form p {
+    color: var(--dark-grey);
+}
+.gray {
+    color: var(--grey);
+}
+/* ============Form End ============== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hc3NldHMvQ3NzL0Zvcm1TdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixjQUFjO0lBQ2Qsb0JBQW9CO0lBQ3BCLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIseUJBQXlCO0lBRXpCLDhCQUE4QjtBQUNsQzs7QUFWQTtBQUFBO0lBUUksMkJBQTJCO0FBRS9CO0FBQUE7QUFDQTtJQUNJLDZCQUE2QjtBQUNqQzs7O0FBR0EsMENBQTBDO0FBQzFDO0lBQ0ksNkJBQTZCO0lBQzdCLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixpQ0FBaUM7QUFDckM7O0FBRUE7SUFDSSxvREFBb0Q7QUFDeEQ7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLDZCQUE2QjtJQUM3QixhQUFhO0lBQ2IsWUFBWTtJQUNaLFlBQVk7SUFDWixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsNkJBQTZCO0lBQzdCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0Esd0NBQXdDIiwic291cmNlc0NvbnRlbnQiOlsiOnJvb3Qge1xuICAgIC0tYmx1ZTogIzAwNzhhYztcbiAgICAtLWxpZ2h0LWdyZWVuOiAjYzFkNjJlO1xuICAgIC0tcmVkOiAjZGQyZTIyO1xuICAgIC0tbGlnaHQtZ3JleTojYmJiYmJiO1xuICAgIC0tZ3JleTojMDAwMDAwO1xuICAgIC0tZGFyay1ncmV5OiMwMDAwMDA7XG4gICAgLS12ZXJ5LWxpZ2h0LWdyZXk6I2VmZWZlZjtcbiAgICAtLWRhcmstZ3JleTpyZ2IoNjUsIDY1LCA2NSk7XG4gICAgLS1iZy1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xufVxuYm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmx1ZSk7XG59XG5cblxuLyogPT09PT09PT09PT09Rm9ybSBTdGFydCA9PT09PT09PT09PT09PSAqL1xuZm9ybSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tYmx1ZSk7XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBtYXgtd2lkdGg6IDQ1MHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJnLWNvbG9yKTtcbn1cblxuLmZvcm0tY2hlY2sge1xuICAgIHRyYW5zaXRpb246IDAuMnMgY3ViaWMtYmV6aWVyKDAuODIsIDAuMjUsIDAuMzgsIDEuMSk7XG59XG5cbmZvcm0gaW1nLmxvZ28ge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xufVxuXG5mb3JtIGJ1dHRvbi5zdWJtaXQtYnRuIHtcbiAgICBwYWRkaW5nOiAxMHB4IDIwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmx1ZSk7XG4gICAgb3V0bGluZTogbm9uZTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbn1cblxuZm9ybSBidXR0b24uc3VibWl0LWJ0bjpob3ZlcntcbiAgICBwYWRkaW5nOiAxMHB4IDIwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmx1ZSk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xufVxuXG5mb3JtIHAge1xuICAgIGNvbG9yOiB2YXIoLS1kYXJrLWdyZXkpO1xufVxuLmdyYXkge1xuICAgIGNvbG9yOiB2YXIoLS1ncmV5KTtcbn1cbi8qID09PT09PT09PT09PUZvcm0gRW5kID09PT09PT09PT09PT09ICovIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style></head>
+  <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="form-container"><form><img class="logo w-50 mx-auto mb-5 mt-3" src="./Consent Form_files/VCH-logo.6363e0d753fa6edf5129.png" alt=""><div class="input-field mb-3"><input id="firstName" type="text" value="Sarthak"><label class="input-lbl-focussed" for="firstName">First Name</label></div><div class="input-field mb-3"><input id="lastName" type="text" value="Chauhan"><label class="input-lbl-focussed" for="lastName">Last Name</label></div><div class="input-field mb-3"><input id="phnNum" type="text" value="1234567"><label class="input-lbl-focussed" for="phnNum">PHN Number</label></div><ol><li><fieldset><p class="m-2">This is the first time I am receiving the Flu Vaccine: </p><div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"><label class="form-check-label gray" for="flexRadioDefault1">Yes</label></div><div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"><label class="form-check-label gray" for="flexRadioDefault2">No</label></div></fieldset></li><li><fieldset><p class="m-2 gray">This is the first time I am receiving the Flu Vaccine: </p><div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"><label class="form-check-label gray" for="flexRadioDefault1">Yes</label></div><div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"><label class="form-check-label gray" for="flexRadioDefault2">No</label></div></fieldset></li></ol><div class="d-flex justify-content-center"><button id="" class="submit-btn">Click Me</button></div></form></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+      <!-- bootstrap js -->
+      <script src="./Consent Form_files/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

@@ -18,7 +18,10 @@
     width: 100%;
 }
 
-input[type=text], input[type=email], input[type=password]{
+input[type=text], 
+input[type=email], 
+input[type=password], 
+input[type=date]{
     border: 1px solid rgb(187, 187, 187);
     border-radius: 5px;
     padding: 5px 10px;
@@ -27,9 +30,12 @@ input[type=text], input[type=email], input[type=password]{
     color: var(--dark-grey);
     width: 100%;
     background-color: var(--bg-color);
+    min-width: 50%;
 }
 
-input[type=text]+label, input[type=password]+label, input[type=email]+label {
+input[type=text]+label, 
+input[type=password]+label, 
+input[type=email]+label {
     position: absolute;
     font-size: 1rem;
     width: 100%;
@@ -38,10 +44,56 @@ input[type=text]+label, input[type=password]+label, input[type=email]+label {
     color: var(--light-grey);
     transition: 0.1s;
     display: inline-block;
+    z-index: 100;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus , 
-input[type=text]:invalid, input[type=password]:invalid, input[type=email]:invalid  {
+input[type=date]+label {
+    position: absolute;
+    font-size: 1rem;
+    width: 100%;
+    top: 5px;
+    left: 20px;
+    color: var(--light-grey);
+    transition: 0.1s;
+    display: inline-block;
+    z-index: 100;
+    /* color: transparent; */
+}
+
+/* remove placeloder */
+/* input[value="0000-00-00"]::-webkit-datetime-edit {
+    color: transparent; 
+} */
+
+/* placeholder text style */
+input:not([value="0000-00-00"])::-webkit-datetime-edit-text,
+input:not([value="0000-00-00"])::-webkit-datetime-edit-month-field,
+input:not([value="0000-00-00"])::-webkit-datetime-edit-day-field,
+input:not([value="0000-00-00"])::-webkit-datetime-edit-year-field,
+input[type=date]:not([value=""])::-webkit-datetime-edit-text,
+input[type=date]:not([value=""])::-webkit-datetime-edit-month-field,
+input[type=date]:not([value=""])::-webkit-datetime-edit-day-field,
+input[type=date]:not([value=""])::-webkit-datetime-edit-year-field {
+    color: black;
+}
+
+/* regular text style */
+/* input[type="date"].date-input--has-value::-webkit-datetime-edit-text,
+input[type="date"].date-input--has-value::-webkit-datetime-edit-month-field,
+input[type="date"].date-input--has-value::-webkit-datetime-edit-day-field,
+input[type="date"].date-input--has-value::-webkit-datetime-edit-year-field {
+  color: black;
+} */
+
+
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus , 
+input[type=date]:focus , 
+input[type=text]:invalid, 
+input[type=password]:invalid, 
+input[type=date]:invalid, 
+input[type=email]:invalid  {
     outline: none;
     box-shadow: none;
     border: 1px solid var(--blue);
@@ -50,6 +102,7 @@ input[type=text]:invalid, input[type=password]:invalid, input[type=email]:invali
 input[type=text]:-webkit-autofill +label, 
 input[type=email]:-webkit-autofill +label, 
 input[type=password]:-webkit-autofill +label,
+input[type=date]:-webkit-autofill +label,
 label.input-lbl-focussed {
     font-size: 12px !important;
     top: -16px !important;
@@ -65,6 +118,7 @@ label.input-lbl-focussed {
 
 input[type=text]:-webkit-autofill ~label, 
 input[type=email]:-webkit-autofill ~label, 
+input[type=date]:-webkit-autofill ~label, 
 input[type=password]:-webkit-autofill ~label {
     left: 20px;
 }

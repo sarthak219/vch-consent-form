@@ -1,10 +1,17 @@
-import React, {useEffect, useRef, useState } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import "../../assets/Css/elementStyles.css"
 
-function Input({id, type, label}) {
+function Input({
+            id, 
+            type, 
+            label,
+            onChange, 
+            value, 
+            onFocus, 
+            onBlur, 
+            isFocussed}) 
+    {
     const inputRef = useRef(null);
-    const [isFocussed, setIsFocussed] = useState(false);
-    const [val, setVal] = useState("");
     const [isBlank, setIsBlank] = useState(true);
 
     useEffect(()=>{
@@ -13,18 +20,18 @@ function Input({id, type, label}) {
     }, [inputRef])
 
     useEffect(()=>{
-        setIsBlank(val === null || val === "" || val === 0)
-    }, [val])
+        setIsBlank(value === null || value === "" || value === 0)
+    }, [value])
 
     return (
         <div className="input-field mb-3"> 
             <input  ref={inputRef}
                     id={id ?? ""} 
                     type={type} 
-                    onFocus={()=>{setIsFocussed(true)}} 
-                    onBlur={()=>{setIsFocussed(false)}}
-                    value={val}
-                    onChange={(e)=>{setVal(e.target.value)}}
+                    value={value}
+                    onChange={onChange}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
                 />
             <label className={isFocussed || !isBlank ? "input-lbl-focussed":""} htmlFor={id ?? ""}>{label}</label>
         </div>

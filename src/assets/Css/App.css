@@ -1,0 +1,22 @@
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    animation: 1s fade-in-up forwards;
+}
+
+@keyframes fade-in-up {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,46 @@
+:root {
+    --blue: #0078ac;
+    --light-green: #c1d62e;
+    --red: #dd2e22;
+    --light-grey:#bbbbbb;
+    --very-light-grey:#efefef;
+    --dark-grey:rgb(65, 65, 65);
+    --bg-color: rgb(255, 255, 255);
+}
+body {
+    background-color: var(--blue);
+}
+/* ============Form Start ============== */
+form {
+    border: 1px solid var(--blue);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 450px;
+    background-color: var(--bg-color);
+}
+
+.form-check {
+    transition: 0.2s cubic-bezier(0.82, 0.25, 0.38, 1.1);
+}
+
+form img.logo {
+    display: block;
+}
+
+form button.submit-btn {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+form button.submit-btn:hover{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border-radius: 5px;
+}
+
+/* ============Form End ============== */

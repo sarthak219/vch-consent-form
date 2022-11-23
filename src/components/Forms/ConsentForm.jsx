@@ -51,27 +51,32 @@ function ConsentForm() {
 
     const validate = () => {
         // Check for empty fields
-        if(firstName.value === null || firstName.value === undefined || firstName.value === "" ) return {success: false, error:"First Name can't be left blank"};
-        if(lastName.value === null || lastName.value === undefined || lastName.value === "" ) return {success: false, error:"Last Name can't be left blank"};;
-        if(email.value === null || email.value === undefined || email.value === "" ) return {success: false, error:"Email can't be left blank"};;
-        if(phnNumber.value === null || phnNumber.value === undefined || phnNumber.value === "" ) return {success: false, error:"PHN number can't be left blank"};;
+        if(isEmpty(firstName.value, "")) return {success: false, error:"First Name can't be left blank"};
+        if(isEmpty(lastName.value, "") ) return {success: false, error:"Last Name can't be left blank"};;
+        if(isEmpty(email.value, "")) return {success: false, error:"Email can't be left blank"};;
+        if(isEmpty(phnNumber.value, "")) return {success: false, error:"PHN number can't be left blank"};;
         if(address.value === null || address.value === undefined || address.value === "" ) return {success: false, error:"Residential address can't be left blank"};;
-        if(contactNumber.value === null || contactNumber.value === undefined || contactNumber.value === "" ) return {success: false, error:"Contact Number can't be left blank"};;
-        if(dob.value === null || dob.value === undefined || dob.value === "" || dob.value === "0000-00-00") return {success: false, error:"Date of birth can't be left blank"};;
+        if(isEmpty(contactNumber.value, "")) return {success: false, error:"Contact Number can't be left blank"};;
+        if(isEmpty(dob.value, "") || dob.value === "0000-00-00") return {success: false, error:"Date of birth can't be left blank"};;
         if(isVchWorker) {
-            if(empCode.value === null || empCode.value === undefined || empCode.value === "" ) return {success: false, error:"Please provide an employee code if you work for VCH"};;
+            if(isEmpty(empCode.value, "")) return {success: false, error:"Please provide an employee code if you work for VCH"};;
         }
-        if(q1 === null || q1 === undefined || q1 === "") return {success: false, error:"Q1 can't be left blank"};
-        if(q2 === null || q2 === undefined || q2 === "") return {success: false, error:"Q2 can't be left blank"};
-        if(q3 === null || q3 === undefined || q3 === "") return {success: false, error:"Q3 can't be left blank"};
-        if(clinic === null || clinic === undefined || clinic === "") return {success: false, error:"Clinic can't be left blank"};
-        if(profession === null || profession === undefined || profession === "") return {success: false, error:"Profession can't be left blank"};
+        if(isEmpty(q1, "")) return {success: false, error:"Q1 can't be left blank"};
+        if(isEmpty(q2, "")) return {success: false, error:"Q2 can't be left blank"};
+        if(isEmpty(q3, "")) return {success: false, error:"Q3 can't be left blank"};
+        if(isEmpty(clinic, "")) return {success: false, error:"Clinic can't be left blank"};
+        if(isEmpty(profession, "")) return {success: false, error:"Profession can't be left blank"};
         if(profession === "other"){
-            if(otherProf.value === null || otherProf.value === undefined || otherProf.value === "") return {success: false, error:"Profession can't be left blank"};
-            if(organization.value === null || organization.value === undefined || organization.value === "") return {success: false, error:"Profession can't be left blank"};
+            if(isEmpty(otherProf.value, "")) return {success: false, error:"Profession can't be left blank"};
+            if(isEmpty(organization.value, "")) return {success: false, error:"Profession can't be left blank"};
         }
         if(!isTermAccepted) return {success: false, error:"Please accept our terms to proceed"};
         return {success:true}
+    }
+    
+    // Checks if val is null or undefinifed or equal to the given initval
+    const isEmpty = (val, initVal)=>{
+        return val === null || val === undefined || val === initVal
     }
 
     function handleIsVchStaffChange(e) {

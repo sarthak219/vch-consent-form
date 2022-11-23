@@ -12,6 +12,8 @@ function ConsentForm() {
     const phnNumber = useInput("");
     const otherProf = useInput("");
     const empCode = useInput("");
+    const address = useInput("");
+    const contactNumber = useInput("");
     const isVchWorkerInput = useInput(false)
     const [isVchWorker, setIsVchWorker] = useState(false)
     const dob = useInput("0000-00-00");
@@ -53,7 +55,12 @@ function ConsentForm() {
         if(lastName.value === null || lastName.value === undefined || lastName.value === "" ) return {success: false, error:"Last Name can't be left blank"};;
         if(email.value === null || email.value === undefined || email.value === "" ) return {success: false, error:"Email can't be left blank"};;
         if(phnNumber.value === null || phnNumber.value === undefined || phnNumber.value === "" ) return {success: false, error:"PHN number can't be left blank"};;
+        if(address.value === null || address.value === undefined || address.value === "" ) return {success: false, error:"Residential address can't be left blank"};;
+        if(contactNumber.value === null || contactNumber.value === undefined || contactNumber.value === "" ) return {success: false, error:"Contact Number can't be left blank"};;
         if(dob.value === null || dob.value === undefined || dob.value === "" || dob.value === "0000-00-00") return {success: false, error:"Date of birth can't be left blank"};;
+        if(isVchWorker) {
+            if(empCode.value === null || empCode.value === undefined || empCode.value === "" ) return {success: false, error:"Please provide an employee code if you work for VCH"};;
+        }
         if(q1 === null || q1 === undefined || q1 === "") return {success: false, error:"Q1 can't be left blank"};
         if(q2 === null || q2 === undefined || q2 === "") return {success: false, error:"Q2 can't be left blank"};
         if(q3 === null || q3 === undefined || q3 === "") return {success: false, error:"Q3 can't be left blank"};
@@ -84,6 +91,8 @@ function ConsentForm() {
             <Input id={"email"} type={"email"} label={"E-mail"} {...email}/>
             <p className='short-msg text-muted'> <i>We will use this to send you your copy</i></p>
             <Input id={"phnNum"} type={"text"} label={"PHN Number"} {...phnNumber}/>
+            <Input id={"address"} type={"text"} label={"Residential Address"} {...address}/>
+            <Input id={"contactNumber"} type={"text"} label={"Contact Number"} {...contactNumber}/>
             <Datepicker id={"dob"} value={""} label="Date of Birth" {...dob}/>
             
             <hr  className='my-4'/>
@@ -166,7 +175,7 @@ function ConsentForm() {
             <hr  className='my-4'/>
 
             <fieldset id="clinic">
-                <h5 className='mx-2 mb-3 gray'>Please select your clinic:</h5>
+                <h5 className='mx-2 mb-3 gray'>Please select a Health Authority :</h5>
                 <div className="d-flex justify-content-around my-2 mx-2">
                     <div className="col-3">
                         <div className="form-check-inline">

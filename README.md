@@ -27,7 +27,7 @@ Organizing schedules
 Figuring out Firebase's Cloud Firestore 
 Getting multiple reactJS pages to work together seamlessly
 
-## ⏭️ What's next for Diversify ⏭️
+## ⏭️ What's next for Consult-Aid ⏭️
 
 RPA implementation to move data into VCH's internal database and ImmunesBC's database
 JWT tokenization and encryption to ensure a high level of security because we're dealing with patient/sensitive employee data

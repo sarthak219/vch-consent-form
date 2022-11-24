@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/vch-consent-form/static/css/main.4e84f734.css",
-    "main.js": "/vch-consent-form/static/js/main.1ed430ab.js",
+    "main.js": "/vch-consent-form/static/js/main.a6d47965.js",
     "static/media/VCH-logo.png": "/vch-consent-form/static/media/VCH-logo.6363e0d753fa6edf5129.png",
     "index.html": "/vch-consent-form/index.html",
     "main.4e84f734.css.map": "/vch-consent-form/static/css/main.4e84f734.css.map",
-    "main.1ed430ab.js.map": "/vch-consent-form/static/js/main.1ed430ab.js.map"
+    "main.a6d47965.js.map": "/vch-consent-form/static/js/main.a6d47965.js.map"
   },
   "entrypoints": [
     "static/css/main.4e84f734.css",
-    "static/js/main.1ed430ab.js"
+    "static/js/main.a6d47965.js"
   ]
 }

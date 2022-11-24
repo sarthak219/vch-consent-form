@@ -4,8 +4,12 @@ import Input from '../elements/Input'
 import "../../assets/Css/FormStyles.css"
 import useInput from '../Hooks/useInput';
 import Datepicker from '../elements/Datepicker';
+import { db } from "../../database/index"
+import { collection, addDoc } from "firebase/firestore"
 
-function ConsentForm() {
+function ConsentForm({setSubmitted}) {
+    const queueCollectionRef = collection(db, "queue");
+
     const firstName = useInput("");
     const lastName = useInput("");
     const email = useInput("");
@@ -15,7 +19,7 @@ function ConsentForm() {
     const address = useInput("");
     const contactNumber = useInput("");
     const isVchWorkerInput = useInput(false)
-    const [isVchWorker, setIsVchWorker] = useState(false)
+    const [isVchEmployee, setIsVchWorker] = useState(false)
     const dob = useInput("0000-00-00");
     const organization = useInput("");
     const [q1, setQ1] = useState("");
@@ -25,6 +29,7 @@ function ConsentForm() {
     const [profession, setProfession] = useState("");
     const isTermAcceptedInput = useInput("");
     const [isTermAccepted, setIsTermAccepted] = useState(false);
+    // const [data, setData] = useState(null);
 
 
     function handleSubmit(e) {
@@ -41,12 +46,20 @@ function ConsentForm() {
                 hasIllness: q2,
                 isAllergic: q3,
                 clinic,
-                profession
+                profession: (profession === "Other") ? otherProf : profession,
+                isVchEmployee,
+                empCode: empCode.value
             }
-            console.log(data);
+            // console.log(data);
+            postData(data);
+            setSubmitted(true);
         } else {
             alert(error);
         }
+    }
+
+    const postData = async (data) => {
+        await addDoc(queueCollectionRef, data);
     }
 
     const validate = () => {
@@ -58,7 +71,7 @@ function ConsentForm() {
         if(address.value === null || address.value === undefined || address.value === "" ) return {success: false, error:"Residential address can't be left blank"};;
         if(isEmpty(contactNumber.value, "")) return {success: false, error:"Contact Number can't be left blank"};;
         if(isEmpty(dob.value, "") || dob.value === "0000-00-00") return {success: false, error:"Date of birth can't be left blank"};;
-        if(isVchWorker) {
+        if(isVchEmployee) {
             if(isEmpty(empCode.value, "")) return {success: false, error:"Please provide an employee code if you work for VCH"};;
         }
         if(isEmpty(q1, "")) return {success: false, error:"Q1 can't be left blank"};
@@ -73,8 +86,8 @@ function ConsentForm() {
         if(!isTermAccepted) return {success: false, error:"Please accept our terms to proceed"};
         return {success:true}
     }
-    
-    // Checks if val is null or undefinifed or equal to the given initval
+
+    // Returns true if val is null or undefinifed or equal to the given initval
     const isEmpty = (val, initVal)=>{
         return val === null || val === undefined || val === initVal
     }
@@ -84,7 +97,6 @@ function ConsentForm() {
     }
     function handleAgreeToTermChange(e) {
         setIsTermAccepted(e.target.checked);
-        console.log("changed", e.target.checked);
     }
 
     return (
@@ -109,7 +121,7 @@ function ConsentForm() {
                         <i>Do you work for VCH?</i>
                     </label>
                 </div> 
-                {isVchWorker && <Input id={"empCode"} type={"text"} label={"Employee Code"} {...empCode}/>}
+                {isVchEmployee && <Input id={"empCode"} type={"text"} label={"Employee Code"} {...empCode}/>}
             </div>
 
             <hr  className='my-4'/>

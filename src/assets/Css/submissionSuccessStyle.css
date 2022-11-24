@@ -1,0 +1,20 @@
+.success-btn {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.submit-btn:hover{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border-radius: 5px;
+}
+
+.success-container {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+}

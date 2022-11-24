@@ -15,7 +15,19 @@ For the frontend, we used ReactJS to create a visual and accessible way for user
 
 To store user data, we took advantage of Firebase and used Axios to fetch and save any data to and from firebase. We also used react-router-dom to handle routing inside of React(JS).
 
-Check out our user form app demo [here](https://sarthak219.github.io/vch-consent-form/) and our nurse form app [here](https://github.com/sarthak219/vch-admin)! 
+Check out our user form app demo [here](https://sarthak219.github.io/vch-consent-form/) and our nurse form app [here](https://github.com/sarthak219/vch-admin)!
+
+### User Form
+
+![](https://cdn.discordapp.com/attachments/596478199924523018/1045219979995389962/ezgif.com-gif-maker_2.gif)
+
+#
+
+### Nurse Form
+
+![](https://cdn.discordapp.com/attachments/596478199924523018/1045220347374485534/good_admin.gif)
+![](https://cdn.discordapp.com/attachments/596478199924523018/1045220346544005130/good_admin_check.gif)
+
 
 ## 😣 Challenges we ran into 😣
 

@@ -24,7 +24,7 @@ function SubmissionSuccess({setSubmission}) {
     // }
   return (
     <div className='success-container d-flex flex-column align-items-center'>
-        <h1>You have Successfull signed up for the Queue</h1>
+        <h1>You have Successfully signed up for the Queue</h1>
         <p className='mt-4'>Please wait to be called.</p>
             {/* <div className="d-flex">
                 <Button onClick={handleSubmit} className={"back-btn mt-3"} type={"button"} text="Back" disabled/>

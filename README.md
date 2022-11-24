@@ -29,16 +29,16 @@ Some Challenges include:
 
 ## ⏭️ What's next for Consult-Aid ⏭️
 
-RPA implementation to move data into VCH's internal database and ImmunesBC's database
-JWT tokenization and encryption to ensure a high level of security because we're dealing with patient/sensitive employee data
-Add VCH employee authentication to prevent random people from inserting data
-Migrate VCH's current database to ours
-Private hosting on VCH servers
+- RPA implementation to move data into VCH's internal database and ImmunesBC's database
+- JWT tokenization and encryption to ensure a high level of security because we're dealing with patient/sensitive employee data
+- Add VCH employee authentication to prevent random people from inserting data
+- Migrate VCH's current database to ours
+- Private hosting on VCH servers
 
 ## 🔨 Built With 🔨
 
-reactJS
-axios
-html
-css
-firebase
+- reactJS
+- axios
+- html
+- css
+- firebase

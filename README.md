@@ -50,7 +50,6 @@ Some Challenges include:
 ## 🔨 Built With 🔨
 
 - reactJS
-- axios
 - html
 - css
 - firebase

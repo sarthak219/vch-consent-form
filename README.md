@@ -23,9 +23,9 @@ We were plagued with challenges
 
 Some Challenges include:
 
-Organizing schedules
-Figuring out Firebase's Cloud Firestore 
-Getting multiple reactJS pages to work together seamlessly
+- Organizing schedules
+- Figuring out Firebase's Cloud Firestore 
+- Getting multiple reactJS pages to work together seamlessly
 
 ## ⏭️ What's next for Consult-Aid ⏭️
 
